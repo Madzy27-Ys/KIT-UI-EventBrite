@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Cartes & Listes – Pulse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/pulse/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="mb-4">Cartes & Listes</h1>
+
+  <h2 class="h4 mb-3">Cartes d’événements (grille)</h2>
+  <div class="list-grid">
+    <!-- Carte Événement -->
+    <div class="card card-hover">
+      <img src="https://picsum.photos/600/380?random=11" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Atelier Design System</h5>
+        <p class="card-text text-muted">Apprends à structurer un design system complet.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-paid">25 €</span>
+          <a class="btn btn-primary btn-sm" href="#">Voir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-hover">
+      <img src="https://picsum.photos/600/380?random=12" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Hackathon JS</h5>
+        <p class="card-text text-muted">Construis un projet en 24h avec ton équipe.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-free">Gratuit</span>
+          <a class="btn btn-primary btn-sm" href="#">Voir</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-hover">
+      <img src="https://picsum.photos/600/380?random=13" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Conférence IA</h5>
+        <p class="card-text text-muted">Les tendances IA pour 2025.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-paid">49 €</span>
+          <a class="btn btn-primary btn-sm" href="#">Voir</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h2 class="h4 mb-3">Cartes horizontales – Participants</h2>
+  <div class="vstack gap-3">
+    <div class="card card-body shadow-sm">
+      <div class="d-flex align-items-center gap-3">
+        <img class="avatar" src="https://picsum.photos/80?random=21" alt="">
+        <div class="flex-grow-1">
+          <div class="fw-bold">Yanis Switaj</div>
+          <div class="text-muted small">Développeur • Paris</div>
+        </div>
+        <a class="btn btn-outline-primary btn-sm" href="#">Profil</a>
+      </div>
+    </div>
+
+    <div class="card card-body shadow-sm">
+      <div class="d-flex align-items-center gap-3">
+        <img class="avatar" src="https://picsum.photos/80?random=22" alt="">
+        <div class="flex-grow-1">
+          <div class="fw-bold">Clara Martin</div>
+          <div class="text-muted small">Product Designer • Lyon</div>
+        </div>
+        <a class="btn btn-outline-primary btn-sm" href="#">Profil</a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <h2 class="h4 mb-3">Cartes villes</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card card-hover h-100">
+        <div class="card-body">
+          <h5 class="card-title">Paris</h5>
+          <p class="card-text text-muted">+120 événements ce mois-ci.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-hover h-100">
+        <div class="card-body">
+          <h5 class="card-title">Lyon</h5>
+          <p class="card-text text-muted">+60 événements ce mois-ci.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn btn-link mt-4" href="index.html">← Retour</a>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
