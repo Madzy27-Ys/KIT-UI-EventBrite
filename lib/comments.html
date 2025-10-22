@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Commentaires — Eventbrite UI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/pulse/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">Section commentaires</h1>
+        <p class="text-muted mb-0">
+          Partagez vos impressions sur cet événement
+        </p>
+      </div>
+      <!-- Section commentaires -->
+      <section class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="card-body p-4">
+          <h2 class="h5 fw-bold mb-4 text-secondary">
+            <i class="bi bi-chat-dots-fill me-2 text-primary"></i>3 commentaires
+          </h2>
+          <!-- Commentaire -->
+          <article class="comment mb-4 pb-3 border-bottom">
+            <img
+              class="avatar shadow-sm"
+              src="https://i.pravatar.cc/100?random"
+              alt="avatar"
+            />
+            <div>
+              <header class="d-flex align-items-center gap-2 mb-1">
+                <strong class="text-dark">Marie P </strong>
+                <span class="dot"></span>
+                <time class="text-muted small">il y a 2 h</time>
+              </header>
+              <p class="mb-2">Super événement ! Ambiance au top 👏</p>
+              <div class="comment-actions d-flex gap-3">
+                <button
+                  class="btn btn-link btn-sm p-0 text-primary fw-semibold"
+                >
+                  <i class="bi bi-hand-thumbs-up me-1"></i>12
+                </button>
+                <button
+                  class="btn btn-link btn-sm p-0 text-primary fw-semibold"
+                >
+                  <i class="bi bi-reply me-1"></i>Répondre
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="comment mb-4 pb-3 border-bottom">
+            <img
+              class="avatar shadow-sm"
+              src="https://i.pravatar.cc/101?random"
+              alt="avatar"
+            />
+            <div>
+              <header class="d-flex align-items-center gap-2 mb-1">
+                <strong class="text-dark">Thomas L</strong>
+                <span class="dot"></span>
+                <time class="text-muted small">hier</time>
+              </header>
+              <p class="mb-2">Organisation nickel, je recommande.</p>
+            </div>
+          </article>
+
+          <article class="comment mb-4">
+            <img
+              class="avatar shadow-sm"
+              src="https://i.pravatar.cc/102?random"
+              alt="avatar"
+            />
+            <div>
+              <header class="d-flex align-items-center gap-2 mb-1">
+                <strong class="text-dark">Sarah F</strong>
+                <span class="dot"></span>
+                <time class="text-muted small">il y a 3 jours</time>
+              </header>
+              <p class="mb-2">Vivement la prochaine édition !</p>
+            </div>
+          </article>
+
+          <div class="border-top pt-4 mt-4">
+            <form class="vstack gap-3">
+              <textarea
+                class="form-control rounded-4 shadow-sm"
+                rows="3"
+                placeholder="Écrire un commentaire…"
+              ></textarea>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="text-muted small">
+                  <i class="bi bi-info-circle me-1"></i> Pas de spam.
+                </div>
+                <button
+                  class="btn btn-primary rounded-pill px-4 shadow-sm fw-semibold"
+                >
+                  <i class="bi bi-send me-1"></i> Commenter
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="container my-4">
+      <a href="../index.html" class="btn btn-outline-primary rounded-pill">
+        <i class="bi bi-arrow-left-circle me-2"></i> Retour en arrière
+      </a>
+    </div>
+  </body>
+</html>

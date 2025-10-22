@@ -1,0 +1,49 @@
+/* ==========================================
+   FOOTER — Pulsar Style
+========================================== */
+
+.footer-app {
+  background: linear-gradient(135deg, #2a215d 0%, #482d8c 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Texte et liens --- */
+.footer-app a {
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+}
+
+.footer-app a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* --- Icônes sociales --- */
+.social-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+  color: #ffcc00;
+  transform: scale(1.15);
+}
+
+/* --- Top section --- */
+.footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-app {
+    text-align: center;
+  }
+
+  .footer-top .container {
+    align-items: center !important;
+  }
+}

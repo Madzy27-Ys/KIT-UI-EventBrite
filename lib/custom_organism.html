@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sélecteur de billets — Eventbrite UI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/pulse/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="container py-5">
+      <h1 class="mb-4 fw-bold">Sélectionnez vos billets</h1>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <div
+                class="mb-3 d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <h6 class="mb-1">Pass Jour — Vendredi</h6>
+                  <p class="small text-muted mb-0">Accès journée complète</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fw-semibold">25 €</span>
+                  <input
+                    type="number"
+                    class="form-control form-control-sm qty"
+                    min="0"
+                    value="0"
+                    data-price="25"
+                    style="width: 70px"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div
+                class="mb-3 d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <h6 class="mb-1">Pass Jour — Samedi</h6>
+                  <p class="small text-muted mb-0">Accès journée complète</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fw-semibold">35 €</span>
+                  <input
+                    type="number"
+                    class="form-control form-control-sm qty"
+                    min="0"
+                    value="0"
+                    data-price="35"
+                    style="width: 70px"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-1">Pass 3 jours</h6>
+                  <p class="small text-muted mb-0">Accès complet festival</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fw-semibold">79 €</span>
+                  <input
+                    type="number"
+                    class="form-control form-control-sm qty"
+                    min="0"
+                    value="0"
+                    data-price="79"
+                    style="width: 70px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-muted small mt-2">
+            <i class="bi bi-shield-check"></i> Paiement sécurisé avec
+            <i class="bi bi-stripe text-primary"></i> Stripe
+          </p>
+        </div>
+
+        <aside class="col-lg-4">
+          <div class="card shadow-sm sticky-lg-top">
+            <div class="card-body">
+              <h2 class="h6 mb-3 fw-bold">Résumé</h2>
+              <p id="summary" class="text-muted small mb-3">
+                Aucun billet sélectionné
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">Total</span>
+                <span class="fs-5 fw-bold" id="total">0 €</span>
+              </div>
+              <button
+                class="btn btn-primary w-100 rounded-pill mt-3"
+                id="checkoutBtn"
+                disabled
+              >
+                Continuer
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <div class="container my-4">
+      <a href="../index.html" class="btn btn-outline-primary rounded-pill">
+        <i class="bi bi-arrow-left-circle me-2"></i> Retour en arrière
+      </a>
+    </div>
+    <script>
+      const qtys = document.querySelectorAll(".qty"),
+        total = document.getElementById("total"),
+        pay = document.getElementById("pay");
+      function calc() {
+        let t = 0;
+        qtys.forEach((q) => (t += (q.value || 0) * q.dataset.price));
+        total.textContent = t + " €";
+        pay.disabled = t == 0;
+      }
+      qtys.forEach((q) => (q.oninput = calc));
+    </script>
+  </body>
+</html>
